@@ -16,9 +16,9 @@ const logosArray = [
 export default function Logos() {
   return (
     <section className='logos__container'>
-      {logosArray.map((logo) => {
+      {logosArray.map((logo, index) => {
         return (
-          <div className='logo'>
+          <div className='logo' key={index}>
             <img src={`./client-logos/${logo.path}`} alt={logo.alt} />
           </div>
         );

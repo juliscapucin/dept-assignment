@@ -1,0 +1,14 @@
+.testimonial__container {
+  width: 100%;
+  height: 28.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $clr-black;
+  gap: 2rem;
+  h3 {
+    color: $clr-white;
+    text-align: center;
+  }
+}

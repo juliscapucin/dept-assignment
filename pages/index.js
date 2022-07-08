@@ -4,9 +4,10 @@ import Image from "next/image";
 
 import Card from "../components/Card";
 import Form from "../components/Form";
-import TextCard from "../components/TextCard";
 import Layout from "../components/Layout";
 import Logos from "../components/Logos";
+import Testimonial from "../components/Testimonial";
+import TextCard from "../components/TextCard";
 
 const placeholderImage = "/image-placeholder.svg";
 
@@ -91,7 +92,7 @@ export async function getStaticProps() {
       hero: data.heros.nodes[0].heroACF,
       cards: data.cards.nodes,
       textCards: data.textCards.nodes,
-      testimonials: data.testimonials.nodes[0].testimonial_text,
+      testimonial: data.testimonials.nodes[0].testimonial_text,
       clients: data.clients.nodes[0].clients.clientsText,
     },
     revalidate: 1,
@@ -103,7 +104,7 @@ export default function Home({
   clients,
   hero,
   sidebar,
-  testimonials,
+  testimonial,
   textCards,
 }) {
   const { heroImage, heroText } = hero;
@@ -159,6 +160,7 @@ export default function Home({
             return <Card key={index} card={card.cards} />;
           })}
         </section>
+        <Testimonial testimonial={testimonial} />
         <section className='home__cards__grid2'>
           {cards4.map((card, index) => {
             return <Card key={index} card={card.cards} />;

@@ -38,7 +38,7 @@ export default function Layout({ title, keywords, description, children }) {
         <meta name='theme-color' content='#ffffff' />
       </Head>
 
-      <main className='main-container'>
+      <main className='main__container'>
         <Header />
         {children}
         <Footer />
