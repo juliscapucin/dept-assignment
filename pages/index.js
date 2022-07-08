@@ -3,6 +3,7 @@ import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import Image from "next/image";
 
 import Card from "../components/Card";
+import Form from "../components/Form";
 import TextCard from "../components/TextCard";
 import Layout from "../components/Layout";
 import Logos from "../components/Logos";
@@ -163,9 +164,8 @@ export default function Home({
             return <Card key={index} card={card.cards} />;
           })}
         </section>
-        <section className='home__logos'>
-          <Logos />
-        </section>
+        <Logos />
+        <Form />
       </main>
     </Layout>
   );
