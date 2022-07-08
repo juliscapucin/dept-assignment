@@ -1,0 +1,136 @@
+/*
+=============== 
+Fonts
+===============
+*/
+
+@import url("https://use.typekit.net/ptx2gkw.css");
+
+/*
+=============== 
+Variables
+===============
+*/
+
+/* Fonts */
+$font-primary: ff-tisa-sans-web-pro, sans-serif;
+$font-secondary: ff-tisa-sans-web-pro, sans-serif;
+
+/* Colors */
+$clr-white: #ffffff;
+$clr-black: #121212;
+$clr-grey: #4d4d48;
+$clr-tint: #3e0fe7;
+$clr-outline: #e7e5e4;
+
+$transition: all 0.3s ease-in;
+$max-width: 1170px;
+$fixed-width: 620px;
+
+$desktop: 992px;
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overscroll-behavior-y: none;
+  font-family: $font-primary;
+  font-weight: 100;
+  background-color: $clr-white;
+  line-height: 1.5;
+  font-size: 1.4rem;
+  letter-spacing: 0.01vw;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  font-weight: 700;
+  text-decoration: none;
+  color: $clr-black;
+  transition: $transition;
+  // Style for react-router <NavLink />
+  &.active {
+    color: #999;
+  }
+}
+a:hover {
+  color: $clr-white;
+}
+
+img {
+  display: block;
+}
+button,
+button:focus {
+  font-size: clamp(0.7rem, 1vw, 0.8rem);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  // border-radius: 25% 10%;
+  // border-radius: 10px;
+}
+
+button:active {
+  outline: none;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+  font-family: $font-primary;
+  font-weight: 100;
+}
+h1 {
+  font-size: clamp(3.8rem, 6.5vw, 13rem);
+  color: $clr-white;
+  line-height: 0.8;
+}
+h2 {
+  font-size: clamp(2.5rem, 4vw, 3rem);
+  color: $clr-tint;
+}
+h3 {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  color: $clr-tint;
+}
+h4 {
+  font-size: clamp(0.875rem, 2vw, 1rem);
+}
+p {
+  margin-bottom: 1.25rem;
+  font-weight: 200;
+  color: $clr-white;
+}
+
+/*
+=============== 
+Imports
+===============
+*/
+
+@import "./footer.scss";
+@import "./header.scss";
+@import "./home.scss";
+@import "./layout.scss";
+@import "./menu.scss";
