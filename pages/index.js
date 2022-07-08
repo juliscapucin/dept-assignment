@@ -3,6 +3,7 @@ import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import Image from "next/image";
 
 import Card from "../components/Card";
+import TextCard from "../components/TextCard";
 import Layout from "../components/Layout";
 
 const placeholderImage = "/image-placeholder.svg";
@@ -46,6 +47,23 @@ export async function getStaticProps() {
             }
           }
         }
+        textCards {
+          nodes {
+            textCards {
+              mainClientName
+              mainTitle
+              client1
+              title1
+              client2
+              title2
+              client3
+              title3
+              mainImage {
+                sourceUrl
+              }
+            }
+          }
+        }
         testimonials(first: 10) {
           nodes {
             testimonial_text {
@@ -70,6 +88,7 @@ export async function getStaticProps() {
       sidebar: data.sidebars.nodes[0].sidebarACF.sidebarItems,
       hero: data.heros.nodes[0].heroACF,
       cards: data.cards.nodes,
+      textCards: data.textCards.nodes,
       testimonials: data.testimonials.nodes[0].testimonial_text,
       clients: data.clients.nodes[0].clients.clientsText,
     },
@@ -77,15 +96,20 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({ testimonials, cards, clients, hero, sidebar }) {
+export default function Home({
+  cards,
+  clients,
+  hero,
+  sidebar,
+  testimonials,
+  textCards,
+}) {
   const { heroImage, heroText } = hero;
 
   let cards1 = [...cards].splice(0, 4);
   let cards2 = [...cards].splice(4, 2);
   let cards3 = [...cards].splice(6, 4);
   let cards4 = [...cards].splice(10, 2);
-
-  console.log(cards);
 
   return (
     <Layout>
@@ -117,10 +141,16 @@ export default function Home({ testimonials, cards, clients, hero, sidebar }) {
             return <Card key={index} card={card.cards} />;
           })}
         </section>
+        <section className='home__textcards__1'>
+          <TextCard textCard={textCards[0]} />;
+        </section>
         <section className='home__cards__grid2'>
           {cards2.map((card, index) => {
             return <Card key={index} card={card.cards} />;
           })}
+        </section>
+        <section className='home__textcards__1'>
+          <TextCard textCard={textCards[1]} />;
         </section>
         <section className='home__cards__grid4'>
           {cards3.map((card, index) => {

@@ -46,6 +46,12 @@
     display: grid;
     grid-template-rows: repeat(2, 48.5rem);
   }
+
+  // .home__textcards__1 {
+  //   width: 100%;
+  //   display: grid;
+  //   grid-template-rows: repeat(2, 48.5rem);
+  // }
 }
 
 @media screen and (min-width: $desktop) {
@@ -62,4 +68,9 @@
     grid-template-rows: repeat(1, 56.8rem);
     grid-template-columns: repeat(2, 1fr);
   }
+
+  // .home__textcards__1 {
+  //   grid-template-rows: repeat(1, 56.8rem);
+  //   grid-template-columns: 2fr 1fr;
+  // }
 }
