@@ -1,21 +1,106 @@
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+
 import Image from "next/image";
 
+import Card from "../components/Card";
 import Layout from "../components/Layout";
 
 const placeholderImage = "/image-placeholder.svg";
 
-export default function Home() {
+// GET STATIC PROPS
+// ----------------
+export async function getStaticProps() {
+  const client = new ApolloClient({
+    uri: "http://dept.wordpresssites.host/graphql",
+    cache: new InMemoryCache(),
+  });
+
+  const { data } = await client.query({
+    query: gql`
+      query Home {
+        sidebars {
+          nodes {
+            sidebarACF {
+              sidebarItems
+            }
+          }
+        }
+        heros {
+          nodes {
+            heroACF {
+              heroImage {
+                sourceUrl
+              }
+              heroText
+            }
+          }
+        }
+        cards(first: 50) {
+          nodes {
+            cards {
+              client
+              image {
+                sourceUrl
+              }
+              title
+            }
+          }
+        }
+        testimonials(first: 10) {
+          nodes {
+            testimonial_text {
+              acftestimonialauthor
+              acftestimonialtext
+            }
+          }
+        }
+        clients {
+          nodes {
+            clients {
+              clientsText
+            }
+          }
+        }
+      }
+    `,
+  });
+
+  return {
+    props: {
+      sidebar: data.sidebars.nodes[0].sidebarACF.sidebarItems,
+      hero: data.heros.nodes[0].heroACF,
+      cards: data.cards.nodes,
+      testimonials: data.testimonials.nodes[0].testimonial_text,
+      clients: data.clients.nodes[0].clients.clientsText,
+    },
+    revalidate: 1,
+  };
+}
+
+export default function Home({ testimonials, cards, clients, hero, sidebar }) {
+  const { heroImage, heroText } = hero;
+
+  let cards1 = [...cards].splice(0, 4);
+  let cards2 = [...cards].splice(4, 2);
+  let cards3 = [...cards].splice(6, 4);
+  let cards4 = [...cards].splice(10, 2);
+
+  console.log(cards);
+
   return (
     <Layout>
-      <main className='main'>
-        <div className='hero'>
-          <div className='hero-img-container'>
-            <div className='hero-img'>
+      <main className='home__main'>
+        <section className='home__hero'>
+          <div className='home__hero__text__container'>
+            <h4>WORK</h4>
+            <h3>{heroText}</h3>
+          </div>
+          <div className='hero__img__container'>
+            <div className='hero__img'>
               <Image
-                src={placeholderImage}
                 alt={"Hero image"}
-                // src={url ?? placeholderImage}
-                // alt={name ?? "Hero image"}
+                src={heroImage.sourceUrl ?? placeholderImage}
+                alt='Hero image'
                 layout='fill'
                 objectFit='cover'
                 objectPosition='center center'
@@ -23,7 +108,30 @@ export default function Home() {
               />
             </div>
           </div>
-        </div>
+        </section>
+        <section className='home__filter'>
+          <h3>Here goes text</h3>
+        </section>
+        <section className='home__cards__grid4'>
+          {cards1.map((card, index) => {
+            return <Card key={index} card={card.cards} />;
+          })}
+        </section>
+        <section className='home__cards__grid2'>
+          {cards2.map((card, index) => {
+            return <Card key={index} card={card.cards} />;
+          })}
+        </section>
+        <section className='home__cards__grid4'>
+          {cards3.map((card, index) => {
+            return <Card key={index} card={card.cards} />;
+          })}
+        </section>
+        <section className='home__cards__grid2'>
+          {cards4.map((card, index) => {
+            return <Card key={index} card={card.cards} />;
+          })}
+        </section>
       </main>
     </Layout>
   );

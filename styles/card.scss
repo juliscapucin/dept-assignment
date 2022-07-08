@@ -1,0 +1,34 @@
+.card__container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  h3 {
+    color: $clr-black;
+  }
+
+  .card__text__container {
+    position: absolute;
+    z-index: 10;
+    left: 3rem;
+    bottom: 3rem;
+    h3 {
+      color: $clr-white;
+    }
+  }
+
+  .card__img__container {
+    width: 100%;
+    height: 48.5rem;
+    .card__img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    .card__img__container {
+      height: 56.8rem;
+    }
+  }
+}
