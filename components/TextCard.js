@@ -1,8 +1,6 @@
 import Image from "next/image";
 
 export default function TextCard(textCard) {
-  console.log(textCard.textCard.textCards.mainImage);
-
   const {
     mainImage,
     mainClientName,

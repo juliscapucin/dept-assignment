@@ -1,8 +1,8 @@
 import { useState } from "react";
-import BurgerMenu from "./BurgerMenu";
+import BurgerButton from "./BurgerButton";
 import Logo from "./logo.svg";
 
-import Sidebar from "./Sidebar";
+import Sidebar from "./Sidemenu";
 
 export default function Header() {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -23,14 +23,14 @@ export default function Header() {
           <li>Careers</li>
           <li>Contact</li>
         </ul>
-        <div className="header__more__btn">
-          <div className="header__more__circle"></div>
-          <div className="header__more__circle"></div>
-          <div className="header__more__circle"></div>
+        <div className='header__more__btn'>
+          <div className='header__more__circle'></div>
+          <div className='header__more__circle'></div>
+          <div className='header__more__circle'></div>
         </div>
-        <div className={`header__burger__menu ${showSidebar && "active"}`}>
+        <div className={`header__burger__button ${showSidebar && "active"}`}>
           <button onClick={() => setShowSidebar(!showSidebar)}>
-            <BurgerMenu />
+            <BurgerButton />
           </button>
         </div>
         <div className={`header__sidebar ${showSidebar && "active"}`}>

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 export default function Sidebar() {
   return (
     <aside>
-      <div className='sidebar__close__btn'></div>
+      <button className='sidebar__close__btn'></button>
       <ul>
         <li>Home</li>
         <li>Werk</li>

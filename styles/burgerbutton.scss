@@ -1,10 +1,10 @@
-.header__burger__menu {
+.header__burger__btn {
   position: fixed;
   top: 2rem;
   right: 2rem;
   z-index: 200;
 
-  .burger__menu {
+  .burger__btn {
     position: relative;
     width: 3rem;
     height: 4rem;
@@ -12,7 +12,7 @@
     flex-direction: column;
     justify-content: center;
 
-    .burger__menu__line {
+    .burger__btn__line {
       width: 100%;
       height: 0.4rem;
       margin: 0.2rem 0;
@@ -21,7 +21,7 @@
   }
 
   &.active {
-    .burger__menu {
+    .burger__btn {
       > :nth-child(1) {
         position: absolute;
         top: 50%;

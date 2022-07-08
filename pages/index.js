@@ -5,6 +5,7 @@ import Image from "next/image";
 import Card from "../components/Card";
 import TextCard from "../components/TextCard";
 import Layout from "../components/Layout";
+import Logos from "../components/Logos";
 
 const placeholderImage = "/image-placeholder.svg";
 
@@ -161,6 +162,9 @@ export default function Home({
           {cards4.map((card, index) => {
             return <Card key={index} card={card.cards} />;
           })}
+        </section>
+        <section className='home__logos'>
+          <Logos />
         </section>
       </main>
     </Layout>
