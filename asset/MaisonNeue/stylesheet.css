@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'Maison Neue TRIAL Extra';
+    src: url('MaisonNeueTRIAL-ExtraThin.woff2') format('woff2'),
+        url('MaisonNeueTRIAL-ExtraThin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Maison Neue TRIAL Book';
+    src: url('MaisonNeueTRIAL-Book.woff2') format('woff2'),
+        url('MaisonNeueTRIAL-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Maison Neue TRIAL';
+    src: url('MaisonNeueTRIAL-Black.woff2') format('woff2'),
+        url('MaisonNeueTRIAL-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Maison Neue TRIAL';
+    src: url('MaisonNeueTRIAL-Medium.woff2') format('woff2'),
+        url('MaisonNeueTRIAL-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Maison Neue TRIAL';
+    src: url('MaisonNeueTRIAL-Bold.woff2') format('woff2'),
+        url('MaisonNeueTRIAL-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Maison Neue TRIAL';
+    src: url('MaisonNeueTRIAL-Light.woff2') format('woff2'),
+        url('MaisonNeueTRIAL-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Maison Neue TRIAL Extra';
+    src: url('MaisonNeueTRIAL-ExtraBold.woff2') format('woff2'),
+        url('MaisonNeueTRIAL-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Maison Neue TRIAL';
+    src: url('MaisonNeueTRIAL-Thin.woff2') format('woff2'),
+        url('MaisonNeueTRIAL-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Maison Neue TRIAL Demi';
+    src: url('MaisonNeueTRIAL-Demi.woff2') format('woff2'),
+        url('MaisonNeueTRIAL-Demi.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
