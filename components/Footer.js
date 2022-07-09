@@ -42,12 +42,15 @@ export default function Footer() {
 
   return (
     <footer className='footer__container'>
-      <div className='footer__scroll__top'>
+      <button
+        className='footer__scroll__top'
+        onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "smooth" })}
+      >
         <div className='footer__arrow'>
           <img src='./icons/arrow-top.svg' alt='Scroll to top' />
         </div>
         <h4>TOP</h4>
-      </div>
+      </button>
       <div className='footer__container__top'>
         <div className='footer__logo__container'>
           <div className='footer__logo'>
