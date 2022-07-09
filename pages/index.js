@@ -3,9 +3,9 @@ import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import Image from "next/image";
 
 import Card from "../components/Card";
+import Clients from "../components/Clients";
 import Form from "../components/Form";
 import Layout from "../components/Layout";
-import Logos from "../components/Logos";
 import Testimonial from "../components/Testimonial";
 import TextCard from "../components/TextCard";
 
@@ -93,7 +93,7 @@ export async function getStaticProps() {
       cards: data.cards.nodes,
       textCards: data.textCards.nodes,
       testimonial: data.testimonials.nodes[0].testimonial_text,
-      clients: data.clients.nodes[0].clients.clientsText,
+      clientsText: data.clients.nodes[0].clients.clientsText,
     },
     revalidate: 1,
   };
@@ -101,7 +101,7 @@ export async function getStaticProps() {
 
 export default function Home({
   cards,
-  clients,
+  clientsText,
   hero,
   sidebar,
   testimonial,
@@ -166,7 +166,7 @@ export default function Home({
             return <Card key={index} card={card.cards} />;
           })}
         </section>
-        <Logos />
+        <Clients text={clientsText} />
         <Form />
       </main>
     </Layout>
