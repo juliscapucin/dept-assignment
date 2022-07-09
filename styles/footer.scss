@@ -1,13 +1,50 @@
 .footer__container {
+  position: relative;
   width: 100%;
   height: 31rem;
   background-color: $clr-black;
   color: $clr-white;
 
-  .footer__logo__container {
-    .footer__logo {
-      color: $clr-white;
-      fill: currentColor;
+  .footer__scroll__top {
+    padding: 2rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 11.7rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $clr-white;
+    > h4 {
+      color: $clr-black;
+      margin-top: 2rem;
     }
+  }
+
+  .footer__container__top {
+    display: flex;
+    .footer__logo__container {
+      .footer__logo {
+        color: $clr-white;
+        fill: currentColor;
+      }
+    }
+
+    .footer__navbar {
+      ul {
+        display: flex;
+      }
+      li {
+        color: $clr-white;
+        margin-left: 3rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .footer__container__bottom {
+    display: flex;
   }
 }
