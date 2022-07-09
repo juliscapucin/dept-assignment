@@ -1,26 +1,3 @@
-.header__sidemenu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  background-color: $clr-black;
-  color: $clr-white;
-  transform: translateX(100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: $transition;
-  z-index: 100;
-
-  &.active {
-    transform: translateX(0);
-    transition: $transition;
-  }
-}
-
 .sidemenu__container {
   width: 100%;
 

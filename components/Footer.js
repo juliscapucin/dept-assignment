@@ -1,7 +1,7 @@
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import { useEffect, useState } from "react";
 
-import Logo from "./logo.svg";
+import DeptLogo from "./DeptLogo";
 
 export default function Footer() {
   const [footerLinks, setFooterLinks] = useState([]);
@@ -38,8 +38,6 @@ export default function Footer() {
     queryData();
   }, []);
 
-  console.log(footerLinks);
-
   return (
     <footer className='footer__container'>
       <button
@@ -54,7 +52,7 @@ export default function Footer() {
       <div className='footer__container__top'>
         <div className='footer__logo__container'>
           <div className='footer__logo'>
-            <Logo width={100} height={40} viewBox='-100 -50 800 200' />
+            <DeptLogo fill={"ffffff"} />
           </div>
         </div>
         <nav className='footer__navbar'>

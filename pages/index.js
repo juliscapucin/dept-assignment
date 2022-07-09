@@ -116,7 +116,6 @@ export default function Home({
           <div className='hero__img__container'>
             <div className='hero__img'>
               <Image
-                alt={"Hero image"}
                 src={heroImage.sourceUrl ?? placeholderImage}
                 alt='Hero image'
                 layout='fill'
@@ -130,7 +129,7 @@ export default function Home({
         <section className='home__filter'>
           <h3>Here goes text</h3>
         </section>
-        <section className='home__cards__grid4'>
+        <section className='home__cards__grid'>
           {cards1.map((card, index) => {
             return <Card key={index} card={card.cards} />;
           })}
@@ -138,7 +137,7 @@ export default function Home({
         <section className='home__textcards__1'>
           <TextCard textCard={textCards[0]} />;
         </section>
-        <section className='home__cards__grid2'>
+        <section className='home__cards__grid'>
           {cards2.map((card, index) => {
             return <Card key={index} card={card.cards} />;
           })}
@@ -146,13 +145,13 @@ export default function Home({
         <section className='home__textcards__1'>
           <TextCard textCard={textCards[1]} />;
         </section>
-        <section className='home__cards__grid4'>
+        <section className='home__cards__grid'>
           {cards3.map((card, index) => {
             return <Card key={index} card={card.cards} />;
           })}
         </section>
         <Testimonial testimonial={testimonial} />
-        <section className='home__cards__grid2'>
+        <section className='home__cards__grid'>
           {cards4.map((card, index) => {
             return <Card key={index} card={card.cards} />;
           })}

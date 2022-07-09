@@ -35,16 +35,10 @@
     }
   }
 
-  .home__cards__grid4 {
+  .home__cards__grid {
     width: 100%;
     display: grid;
-    // grid-template-rows: repeat(4, 48.5rem);
-  }
-
-  .home__cards__grid2 {
-    width: 100%;
-    display: grid;
-    grid-template-rows: repeat(2, 48.5rem);
+    grid-template-rows: repeat(autofill, 48.5rem);
   }
 
   // .home__textcards__1 {
@@ -59,13 +53,8 @@
     height: calc(100vh - 11.5rem);
   }
 
-  .home__cards__grid4 {
-    grid-template-rows: repeat(2, 56.8rem);
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .home__cards__grid2 {
-    grid-template-rows: repeat(1, 56.8rem);
+  .home__cards__grid {
+    grid-template-rows: repeat(autofill, 56.8rem);
     grid-template-columns: repeat(2, 1fr);
   }
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
 import BurgerButton from "./BurgerButton";
-import Logo from "./logo.svg";
+import DeptLogo from "./DeptLogo";
 
 import SideMenu from "./SideMenu";
 
@@ -46,7 +46,7 @@ export default function Header() {
     <header className='header'>
       <div className='header__logo__container'>
         <div className='header__logo'>
-          <Logo width={100} height={40} viewBox='-100 -50 800 200' />
+          <DeptLogo fill={"ffffff"} />
         </div>
       </div>
       <nav className='navbar'>
@@ -65,10 +65,10 @@ export default function Header() {
             <BurgerButton isSideMenuOpen={showSideMenu} />
           </button>
         </div>
-        <div className={`header__sidemenu ${showSideMenu && "active"}`}>
-          <SideMenu />
-        </div>
       </nav>
+      <div className={`header__sidemenu ${showSideMenu && "active"}`}>
+        <SideMenu />
+      </div>
     </header>
   );
 }
