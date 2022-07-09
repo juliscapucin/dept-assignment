@@ -1,10 +1,10 @@
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import { useEffect, useState } from "react";
 
-export default function Sidebar() {
+export default function SideMenu() {
   return (
     <aside>
-      <button className='sidebar__close__btn'></button>
+      <button className='sidemenu__close__btn'></button>
       <ul>
         <li>Home</li>
         <li>Werk</li>
