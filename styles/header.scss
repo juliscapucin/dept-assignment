@@ -37,6 +37,11 @@ Header
     .header__more__btn {
       display: none;
     }
+
+    .header__burger__btn {
+      display: block;
+      background-color: yellow;
+    }
   }
 }
 
@@ -59,10 +64,6 @@ Header
       display: flex;
       align-items: center;
 
-      .header__burger__menu {
-        display: none;
-      }
-
       > ul {
         display: flex;
 
@@ -82,6 +83,10 @@ Header
           height: 1rem;
           margin-left: 0.5rem;
         }
+      }
+
+      .header__burger__btn {
+        display: none;
       }
     }
   }

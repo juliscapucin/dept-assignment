@@ -42,8 +42,6 @@ export default function Header() {
     queryData();
   }, []);
 
-  console.log(navLinks);
-
   return (
     <header className='header'>
       <div className='header__logo__container'>
@@ -64,7 +62,7 @@ export default function Header() {
         </div>
         <div className={`header__burger__button ${showSideMenu && "active"}`}>
           <button onClick={() => setShowSideMenu(!showSideMenu)}>
-            <BurgerButton />
+            <BurgerButton isSideMenuOpen={showSideMenu} />
           </button>
         </div>
         <div className={`header__sidemenu ${showSideMenu && "active"}`}>

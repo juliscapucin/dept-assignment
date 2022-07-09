@@ -1,46 +1,41 @@
-.header__burger__btn {
+.burger__btn__container {
   position: fixed;
-  top: 2rem;
-  right: 2rem;
+  position: relative;
+  width: 3rem;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   z-index: 200;
 
-  .burger__btn {
-    position: relative;
-    width: 3rem;
-    height: 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    .burger__btn__line {
-      width: 100%;
-      height: 0.4rem;
-      margin: 0.2rem 0;
-      background-color: $clr-black;
-    }
+  .burger__btn__line {
+    width: 100%;
+    height: 0.4rem;
+    margin: 0.2rem 0;
+    background-color: $clr-black;
   }
 
   &.active {
-    .burger__btn {
-      > :nth-child(1) {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        background-color: $clr-white;
-        transform: translate(-50%, -50%) rotate(45deg);
-      }
+    .burger__btn__line {
+      background-color: $clr-white;
+    }
 
-      > :nth-child(2) {
-        opacity: 0;
-      }
+    > :nth-child(1) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
 
-      > :nth-child(3) {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        background-color: $clr-white;
-        transform: translate(-50%, -50%) rotate(-45deg);
-      }
+    > :nth-child(2) {
+      opacity: 0;
+    }
+
+    > :nth-child(3) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
     }
   }
 }

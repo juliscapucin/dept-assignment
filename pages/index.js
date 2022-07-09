@@ -22,13 +22,6 @@ export async function getStaticProps() {
   const { data } = await client.query({
     query: gql`
       query Home {
-        sidebars {
-          nodes {
-            sidebarACF {
-              sidebarItems
-            }
-          }
-        }
         heros {
           nodes {
             heroACF {
@@ -88,7 +81,6 @@ export async function getStaticProps() {
 
   return {
     props: {
-      sidebar: data.sidebars.nodes[0].sidebarACF.sidebarItems,
       hero: data.heros.nodes[0].heroACF,
       cards: data.cards.nodes,
       textCards: data.textCards.nodes,
@@ -103,7 +95,6 @@ export default function Home({
   cards,
   clientsText,
   hero,
-  sidebar,
   testimonial,
   textCards,
 }) {

@@ -1,9 +1,9 @@
-export default function BurgerButton() {
+export default function BurgerButton({ isSideMenuOpen }) {
   return (
-    <div className='burger__btn'>
-      <span className='burger__btn__line'></span>
-      <span className='burger__btn__line'></span>
-      <span className='burger__btn__line'></span>
+    <div className={`burger__btn__container ${isSideMenuOpen ? "active" : ""}`}>
+      <div className='burger__btn__line'></div>
+      <div className='burger__btn__line'></div>
+      <div className='burger__btn__line'></div>
     </div>
   );
 }

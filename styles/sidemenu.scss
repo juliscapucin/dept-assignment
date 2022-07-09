@@ -1,9 +1,11 @@
 .header__sidemenu {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  height: 100vh;
+  width: 100vw;
   background-color: $clr-black;
   color: $clr-white;
   transform: translateX(100%);
@@ -19,6 +21,16 @@
   }
 }
 
-.aside {
+.sidemenu__container {
   width: 100%;
+
+  .sidemenu__links__container {
+    padding: 4rem;
+    > li {
+      border-bottom: 1px $clr-white solid;
+      padding: 2rem 0;
+      text-transform: uppercase;
+      text-align: right;
+    }
+  }
 }
