@@ -3,6 +3,7 @@ import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import Image from "next/image";
 
 import Card from "../components/Card";
+import CaseFilter from "../components/CaseFilter";
 import Clients from "../components/Clients";
 import Form from "../components/Form";
 import Layout from "../components/Layout";
@@ -126,8 +127,8 @@ export default function Home({
             </div>
           </div>
         </section>
-        <section className='home__filter'>
-          <h3>Here goes text</h3>
+        <section className='home__casefilter'>
+          <CaseFilter />
         </section>
         <section className='home__cards__grid'>
           {cards1.map((card, index) => {

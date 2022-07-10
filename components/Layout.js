@@ -14,6 +14,7 @@ export default function Layout({ title, keywords, description, children }) {
         <title>{title}</title>
         <meta name='description' content={description} />
         <meta name='keywords' content={keywords} />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <meta charSet='UTF-8' />
         <link
           rel='apple-touch-icon'

@@ -35,9 +35,10 @@
   .textcard__text__container {
     width: 100%;
     background-color: $clr-black;
-    padding: 4rem;
-    display: grid;
-    place-items: center;
+    padding: 2rem 4rem 4rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     .textcard__text__item {
       padding: 4rem 0;
@@ -47,13 +48,16 @@
       }
       &:nth-child(2) {
         border-top: 1px $clr-light-grey solid;
-        border-bottom: 1px $clr-light-grey solid;
+        border-bottom: none;
         padding: 4rem 0;
       }
 
       .textcard__item__subtitle {
         text-transform: uppercase;
       }
+    }
+    .textcard__text__item:last-child {
+      display: none;
     }
   }
 
@@ -62,6 +66,20 @@
     grid-template-columns: 2fr 1fr;
     .textcard__img__container {
       min-height: 56.8rem;
+    }
+
+    .textcard__text__container {
+      .textcard__text__item {
+        &:nth-child(2) {
+          border-top: 1px $clr-light-grey solid;
+          border-bottom: 1px $clr-light-grey solid;
+          padding: 4rem 0;
+        }
+      }
+
+      .textcard__text__item:last-child {
+        display: block;
+      }
     }
   }
 }

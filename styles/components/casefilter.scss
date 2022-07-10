@@ -1,0 +1,47 @@
+.casefilter__container {
+  display: none;
+}
+
+@media screen and (min-width: $desktop) {
+  .casefilter__container {
+    width: 100%;
+    padding: 3rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    h4 {
+      color: #a3a3a3;
+      line-height: 1;
+      vertical-align: middle;
+
+      a {
+        color: $clr-black;
+        letter-spacing: 0.15em;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        vertical-align: top;
+      }
+
+      a:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 1px;
+        position: absolute;
+        background-color: $clr-black;
+        width: 100%;
+        left: 0;
+        transition: $transition;
+      }
+
+      a:hover:after {
+        width: 100%;
+        left: 100%;
+      }
+    }
+  }
+}
