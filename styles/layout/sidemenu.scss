@@ -1,8 +1,10 @@
 .sidemenu__container {
   width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
 
   .sidemenu__links__container {
-    padding: 4rem;
+    padding: 10rem 4rem 4rem 4rem;
     > li {
       border-bottom: 1px $clr-white solid;
       padding: 2rem 0;

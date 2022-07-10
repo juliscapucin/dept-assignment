@@ -1,12 +1,14 @@
-import React from "react";
-import Head from "next/head";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 import Header from "./Header";
 import Footer from "./Footer";
 
 export default function Layout({ title, keywords, description, children }) {
   const router = useRouter();
+
+  const [showSideMenu, setShowSideMenu] = useState(false);
 
   return (
     <>
@@ -39,8 +41,12 @@ export default function Layout({ title, keywords, description, children }) {
         <meta name='theme-color' content='#ffffff' />
       </Head>
 
-      <main className='main__container'>
-        <Header />
+      <main
+        className={`main__container ${
+          showSideMenu ? "main__disable__scroll" : ""
+        }`}
+      >
+        <Header showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
         {children}
         <Footer />
       </main>

@@ -8,8 +8,7 @@ import DeptLogo from "./DeptLogo";
 
 import SideMenu from "./SideMenu";
 
-export default function Header() {
-  const [showSideMenu, setShowSideMenu] = useState(false);
+export default function Header({ showSideMenu, setShowSideMenu }) {
   const [navLinks, setNavLinks] = useState([]);
 
   const queryData = async () => {
@@ -42,7 +41,6 @@ export default function Header() {
 
   useEffect(() => {
     queryData();
-    console.log(window.innerWidth);
   }, []);
 
   return (

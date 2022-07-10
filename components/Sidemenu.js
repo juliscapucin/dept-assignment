@@ -44,7 +44,11 @@ export default function SideMenu() {
       <button className='sidemenu__close__btn'></button>
       <ul className='sidemenu__links__container'>
         {sidemenuLinks.map((link, index) => {
-          return <li key={index}>{link.title}</li>;
+          return (
+            <li key={index}>
+              <h2>{link.title}</h2>
+            </li>
+          );
         })}
       </ul>
     </nav>
