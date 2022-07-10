@@ -1,6 +1,8 @@
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import { useEffect, useState } from "react";
 
+import Link from "next/link";
+
 import DeptLogo from "./DeptLogo";
 
 export default function Footer() {
@@ -8,7 +10,7 @@ export default function Footer() {
 
   const queryData = async () => {
     const client = new ApolloClient({
-      uri: "http://dept.wordpresssites.host/graphql",
+      uri: "https://dept.wordpresssites.host/graphql",
       cache: new InMemoryCache(),
     });
 
@@ -58,7 +60,13 @@ export default function Footer() {
         <nav className='footer__navbar'>
           <ul>
             {footerLinks.map((link, index) => {
-              return <li key={index}>{link.title}</li>;
+              return (
+                <li key={index}>
+                  <Link href={link.footerLink.footerLink}>
+                    <a>{link.title}</a>
+                  </Link>
+                </li>
+              );
             })}
           </ul>
         </nav>

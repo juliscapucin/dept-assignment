@@ -1,11 +1,7 @@
-/*
-=============== 
-Header
-===============
-*/
-
 .header {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 11.5rem;
   display: flex;
@@ -14,6 +10,7 @@ Header
   background-color: $clr-white;
   color: $clr-black;
   padding: 2rem;
+  z-index: 15;
 
   .header__logo__container {
     width: 15rem;
@@ -40,8 +37,21 @@ Header
     }
 
     .header__burger__btn {
+      position: relative;
       display: block;
-      background-color: yellow;
+
+      .header__menu__btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        z-index: 300;
+
+        p {
+          color: $clr-black;
+        }
+      }
     }
   }
 
@@ -121,22 +131,6 @@ Header
             left: 0;
           }
         }
-      }
-      .header__more__btn {
-        display: flex;
-        margin-left: 4rem;
-
-        .header__more__circle {
-          border-radius: 50%;
-          background-color: $clr-white;
-          width: 1rem;
-          height: 1rem;
-          margin-left: 0.5rem;
-        }
-      }
-
-      .header__burger__btn {
-        display: none;
       }
     }
   }

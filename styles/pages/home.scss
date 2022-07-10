@@ -4,7 +4,7 @@
   .home__hero {
     position: relative;
     width: 100%;
-    height: calc(100vh - 5.6rem);
+    height: 100vh;
     overflow: hidden;
 
     .home__hero__text__container {
@@ -16,7 +16,7 @@
 
     .home__hero__img__container {
       width: 100vw;
-      height: calc(100vh - 5.6rem);
+      height: 100vh;
 
       .home__hero__img {
         position: relative;

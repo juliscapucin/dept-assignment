@@ -1,7 +1,14 @@
 .sidemenu__container {
+  position: relative;
   width: 100%;
   height: 100vh;
   overflow-y: scroll;
+
+  .sidemenu__close__btn {
+    position: absolute;
+    right: 4rem;
+    top: 4rem;
+  }
 
   .sidemenu__links__container {
     padding: 10rem 4rem 4rem 4rem;

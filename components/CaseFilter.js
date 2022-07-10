@@ -4,14 +4,14 @@ export default function CaseFilter() {
   return (
     <section className='casefilter__container'>
       <div>
-        <h4>
+        <h5>
           Show me <a>all work</a>
-        </h4>
+        </h5>
       </div>
       <div>
-        <h4>
+        <h5>
           in <a>all industries</a>
-        </h4>
+        </h5>
       </div>
     </section>
   );

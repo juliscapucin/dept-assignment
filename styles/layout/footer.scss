@@ -31,9 +31,12 @@
         display: block;
       }
       li {
-        color: $clr-white;
         margin: 0 0 3rem 0;
         text-transform: uppercase;
+
+        a {
+          color: $clr-white;
+        }
       }
     }
   }
@@ -85,9 +88,37 @@
       .footer__navbar {
         ul {
           display: flex;
+          align-items: center;
         }
         li {
           margin: 0 0 0 3rem;
+
+          a {
+            color: $clr-white;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            vertical-align: bottom;
+          }
+
+          a:after {
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 1px;
+            position: absolute;
+            background-color: $clr-white;
+            width: 100%;
+            left: -100%;
+            transition: $transition;
+          }
+
+          a:hover:after {
+            width: 100%;
+            left: 0;
+          }
         }
       }
     }

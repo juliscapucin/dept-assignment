@@ -8,7 +8,7 @@ export default function SideMenu() {
 
   const queryData = async () => {
     const client = new ApolloClient({
-      uri: "http://dept.wordpresssites.host/graphql",
+      uri: "https://dept.wordpresssites.host/graphql",
       cache: new InMemoryCache(),
     });
 
@@ -41,7 +41,6 @@ export default function SideMenu() {
   return (
     <nav className='sidemenu__container'>
       <CountrySelect />
-      <button className='sidemenu__close__btn'></button>
       <ul className='sidemenu__links__container'>
         {sidemenuLinks.map((link, index) => {
           return (

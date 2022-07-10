@@ -5,19 +5,19 @@
 @media screen and (min-width: $desktop) {
   .casefilter__container {
     width: 100%;
-    padding: 3rem 4rem;
+    height: 9rem;
+    padding: 2.5rem 4rem;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 
-    h4 {
+    h5 {
       color: #a3a3a3;
       line-height: 1;
       vertical-align: middle;
 
       a {
         color: $clr-black;
-        letter-spacing: 0.15em;
         display: inline-block;
         position: relative;
         cursor: pointer;

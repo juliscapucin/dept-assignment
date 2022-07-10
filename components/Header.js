@@ -3,7 +3,7 @@ import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
 import Link from "next/link";
 
-import BurgerButton from "./BurgerButton";
+import MenuButton from "./MenuButton";
 import DeptLogo from "./DeptLogo";
 
 import SideMenu from "./SideMenu";
@@ -13,7 +13,7 @@ export default function Header({ showSideMenu, setShowSideMenu }) {
 
   const queryData = async () => {
     const client = new ApolloClient({
-      uri: "http://dept.wordpresssites.host/graphql",
+      uri: "https://dept.wordpresssites.host/graphql",
       cache: new InMemoryCache(),
     });
 
@@ -67,14 +67,12 @@ export default function Header({ showSideMenu, setShowSideMenu }) {
             );
           })}
         </ul>
-        <div className='header__more__btn'>
-          <div className='header__more__circle'></div>
-          <div className='header__more__circle'></div>
-          <div className='header__more__circle'></div>
-        </div>
-        <div className={`header__burger__button ${showSideMenu && "active"}`}>
+        {/* <button onClick={() => setShowSideMenu(!showSideMenu)}>
+          <ButtonMore />
+        </button> */}
+        <div className={`header__burger__btn ${showSideMenu && "active"}`}>
           <button onClick={() => setShowSideMenu(!showSideMenu)}>
-            <BurgerButton isSideMenuOpen={showSideMenu} />
+            <MenuButton isSideMenuOpen={showSideMenu} />
           </button>
         </div>
       </nav>

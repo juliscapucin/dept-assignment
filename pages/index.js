@@ -16,7 +16,7 @@ const placeholderImage = "/image-placeholder.svg";
 // ----------------
 export async function getStaticProps() {
   const client = new ApolloClient({
-    uri: "http://dept.wordpresssites.host/graphql",
+    uri: "https://dept.wordpresssites.host/graphql",
     cache: new InMemoryCache(),
   });
 
@@ -111,8 +111,8 @@ export default function Home({
       <main className='home__main'>
         <section className='home__hero'>
           <div className='home__hero__text__container'>
-            <h4>WORK</h4>
-            <h3 dangerouslySetInnerHTML={{ __html: heroText }}></h3>
+            <p>WORK</p>
+            <h4 dangerouslySetInnerHTML={{ __html: heroText }}></h4>
           </div>
           <div className='hero__img__container'>
             <div className='hero__img'>

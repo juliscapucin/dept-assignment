@@ -1,0 +1,81 @@
+.menu__btn__container {
+  height: 10rem;
+  width: 10rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  .menu__btns {
+    position: relative;
+    background-color: yellow;
+
+    .menu__btn__menu {
+      position: absolute;
+      right: 0;
+      top: 3rem;
+      p {
+        color: $clr-black;
+        line-height: 1;
+      }
+    }
+
+    .menu__btn__more {
+      position: absolute;
+      right: 0;
+      top: 3.5rem;
+      display: none;
+    }
+  }
+
+  .menu__btn__close {
+    position: absolute;
+    right: 2rem;
+    width: 3rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 200;
+
+    .menu__btn__line {
+      width: 100%;
+      height: 0.4rem;
+      margin: 0.2rem 0;
+      background-color: $clr-white;
+    }
+
+    &.active {
+      .menu__btn__line {
+        background-color: $clr-white;
+      }
+
+      > :nth-child(1) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      > :nth-child(2) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .menu__btn__container {
+    .menu__btns {
+      .menu__btn__menu {
+        display: none;
+      }
+
+      .menu__btn__more {
+        display: block;
+      }
+    }
+  }
+}
