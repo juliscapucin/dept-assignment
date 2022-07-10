@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
+import Link from "next/link";
+
 import BurgerButton from "./BurgerButton";
 import DeptLogo from "./DeptLogo";
 
@@ -46,15 +48,25 @@ export default function Header() {
   return (
     <header className='header'>
       <div className='header__logo__container'>
-        <div className='header__logo'>
-          <DeptLogo fill='ffffff' />
-          {/* <DeptLogo fill={window.innerWidth > 992 ? "ffffff" : "000000"} /> */}
-        </div>
+        <Link href='/'>
+          <a>
+            <div className='header__logo'>
+              <DeptLogo fill='ffffff' />
+              {/* <DeptLogo fill={window.innerWidth > 992 ? "ffffff" : "000000"} /> */}
+            </div>
+          </a>
+        </Link>
       </div>
       <nav className='navbar'>
         <ul>
           {navLinks.map((link, index) => {
-            return <li key={index}>{link.title}</li>;
+            return (
+              <li key={index}>
+                <Link href={`/${link.navbarACF.link}`}>
+                  <a>{link.title}</a>
+                </Link>
+              </li>
+            );
           })}
         </ul>
         <div className='header__more__btn'>

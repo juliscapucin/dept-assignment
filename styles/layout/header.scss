@@ -93,6 +93,33 @@ Header
         > li {
           margin-left: 4rem;
           text-transform: uppercase;
+
+          a {
+            color: $clr-white;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            vertical-align: top;
+          }
+
+          a:after {
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 1px;
+            position: absolute;
+            background-color: $clr-white;
+            width: 100%;
+            left: -100%;
+            transition: $transition;
+          }
+
+          a:hover:after {
+            width: 100%;
+            left: 0;
+          }
         }
       }
       .header__more__btn {
