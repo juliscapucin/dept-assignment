@@ -7,6 +7,7 @@
   }
 
   .card__text__container {
+    pointer-events: none;
     position: absolute;
     z-index: 10;
     left: 3rem;
@@ -14,21 +15,51 @@
     h3 {
       color: $clr-white;
     }
+    .card__text__subtitle {
+      text-transform: uppercase;
+    }
   }
 
   .card__img__container {
     width: 100%;
     height: 48.5rem;
+    overflow: hidden;
+
+    &::after {
+      pointer-events: none;
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgb(0, 0, 0);
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5) 3%,
+        rgba(0, 0, 0, 0) 80%
+      );
+      z-index: 2;
+    }
+
     .card__img {
       position: relative;
       width: 100%;
       height: 100%;
     }
   }
+}
 
-  @media screen and (min-width: $desktop) {
-    .card__img__container {
-      height: 56.8rem;
+@media screen and (min-width: $desktop) {
+  .card__img__container {
+    height: 56.8rem;
+
+    .card__img {
+      transition: $transition;
+
+      &:hover {
+        transform: scale(1.06);
+      }
     }
   }
 }

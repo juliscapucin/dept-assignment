@@ -1,5 +1,6 @@
 .testimonial__container {
   width: 100%;
+  padding: 0 4rem;
   height: 28.4rem;
   display: flex;
   flex-direction: column;
@@ -7,8 +8,12 @@
   justify-content: center;
   background-color: $clr-black;
   gap: 2rem;
-  h3 {
+  h4 {
     color: $clr-white;
     text-align: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 0 8rem;
   }
 }

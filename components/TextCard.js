@@ -1,4 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
+
+import ReadMore from "./ReadMore";
 
 export default function TextCard(textCard) {
   const {
@@ -25,19 +28,24 @@ export default function TextCard(textCard) {
         <div className='textcard__title__container'>
           <h3>{mainClientName}</h3>
           <h3>{mainTitle}</h3>
+          <ReadMore />
         </div>
-        <div className='textcard__img__container'>
-          <div className='textcard__img'>
-            <Image
-              src={mainImage.sourceUrl}
-              alt='Image'
-              layout='fill'
-              objectFit='cover'
-              objectPosition='center center'
-              priority
-            />
-          </div>
-        </div>
+        <Link href='#'>
+          <a>
+            <div className='textcard__img__container'>
+              <div className='textcard__img'>
+                <Image
+                  src={mainImage.sourceUrl}
+                  alt='Image'
+                  layout='fill'
+                  objectFit='cover'
+                  objectPosition='center center'
+                  priority
+                />
+              </div>
+            </div>
+          </a>
+        </Link>
       </div>
       <div className='textcard__text__container'>
         {textsArray.map((item, index) => {
@@ -47,8 +55,9 @@ export default function TextCard(textCard) {
                 <p>{item.subtitle}</p>
               </div>
               <div className='textcard__item__title'>
-                <h4>{item.title}</h4>
+                <p>{item.title}</p>
               </div>
+              <ReadMore />
             </div>
           );
         })}

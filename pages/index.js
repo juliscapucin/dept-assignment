@@ -112,7 +112,7 @@ export default function Home({
         <section className='home__hero'>
           <div className='home__hero__text__container'>
             <h4>WORK</h4>
-            <h3>{heroText}</h3>
+            <h3 dangerouslySetInnerHTML={{ __html: heroText }}></h3>
           </div>
           <div className='hero__img__container'>
             <div className='hero__img'>

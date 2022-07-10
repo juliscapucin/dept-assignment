@@ -5,7 +5,7 @@ export default function Clients({ text }) {
     <section className='clients__container'>
       <div className='clients__text'>
         <h3>Clients</h3>
-        <h4>{text}</h4>
+        <h6 dangerouslySetInnerHTML={{ __html: text }}></h6>
       </div>
       <Logos />
     </section>
