@@ -1,59 +1,109 @@
 .footer__container {
-  padding: 4rem 15.7rem 4rem 4rem;
+  padding: 4rem 4rem 4rem 4rem;
   position: relative;
   width: 100%;
-  height: 31rem;
+  min-height: 31rem;
   background-color: $clr-black;
   color: $clr-white;
 
   .footer__scroll__top {
-    padding: 2rem;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 11.7rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: $clr-white;
-    > h4 {
-      color: $clr-black;
-      margin-top: 2rem;
-    }
+    display: none;
   }
 
   .footer__container__top {
+    width: 100%;
     padding-bottom: 4rem;
     margin-bottom: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    display: block;
     border-bottom: 1px solid $clr-dark-grey;
+
     .footer__logo__container {
-      margin-right: 8rem;
+      margin-right: 0;
       .footer__logo {
         color: $clr-white;
         fill: currentColor;
       }
+      display: none;
     }
 
     .footer__navbar {
       ul {
-        display: flex;
+        display: block;
       }
       li {
         color: $clr-white;
-        margin-left: 3rem;
+        margin: 0 0 3rem 0;
         text-transform: uppercase;
       }
     }
   }
 
   .footer__container__bottom {
-    padding-right: 11.7rem;
-    display: flex;
-    justify-content: space-between;
+    display: block;
+    p {
+      color: $clr-medium-grey;
+      margin: 0;
+
+      &:last-child {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 4rem 15.7rem 4rem 4rem;
+    height: 31rem;
+
+    .footer__scroll__top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 11.7rem;
+      height: 100%;
+      background-color: $clr-white;
+
+      > h4 {
+        color: $clr-black;
+        margin-top: 2rem;
+      }
+    }
+
+    .footer__container__top {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      .footer__logo__container {
+        display: block;
+      }
+
+      .footer__navbar {
+        ul {
+          display: flex;
+        }
+        li {
+          margin: 0 0 0 3rem;
+        }
+      }
+    }
+
+    .footer__container__bottom {
+      padding-right: 11.7rem;
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        margin: 0;
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
   }
 }

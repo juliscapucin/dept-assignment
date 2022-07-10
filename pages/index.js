@@ -135,7 +135,7 @@ export default function Home({
           })}
         </section>
         <section className='home__textcards__1'>
-          <TextCard textCard={textCards[0]} />;
+          <TextCard textCard={textCards[0]} />
         </section>
         <section className='home__cards__grid'>
           {cards2.map((card, index) => {
@@ -143,7 +143,7 @@ export default function Home({
           })}
         </section>
         <section className='home__textcards__1'>
-          <TextCard textCard={textCards[1]} />;
+          <TextCard textCard={textCards[1]} />
         </section>
         <section className='home__cards__grid'>
           {cards3.map((card, index) => {
