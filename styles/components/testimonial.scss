@@ -8,12 +8,15 @@
   justify-content: center;
   background-color: $clr-black;
   gap: 2rem;
-  h4 {
+  h5 {
     color: $clr-white;
     text-align: center;
   }
+  h6 {
+    text-transform: uppercase;
+  }
 
   @media screen and (min-width: $desktop) {
-    padding: 0 8rem;
+    padding: 0 4rem;
   }
 }

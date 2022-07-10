@@ -23,7 +23,7 @@ body {
   background-color: $clr-white;
   line-height: 1.5;
   font-size: 1.6rem;
-  letter-spacing: 0.01vw;
+  letter-spacing: 0.01rem;
 }
 ul {
   list-style-type: none;
@@ -64,9 +64,10 @@ h2,
 h3,
 h4 {
   color: $clr-white;
-  line-height: 1.2;
+  line-height: 1;
   font-family: $font-primary;
   font-weight: 100;
+  letter-spacing: 0.1rem;
 }
 h1 {
   font-size: clamp(11.6rem, 12vw, 11.6rem);
@@ -82,9 +83,13 @@ h4 {
   font-size: clamp(3.4rem, 3.5vw, 3.4rem);
 }
 h5 {
+  letter-spacing: 0.05rem;
+  line-height: 1.4;
   font-size: clamp(2.6rem, 3vw, 2.6rem);
 }
 h6 {
+  letter-spacing: 0.05rem;
+  line-height: 1.8;
   font-size: clamp(1.8rem, 2vw, 1.8rem);
 }
 p {

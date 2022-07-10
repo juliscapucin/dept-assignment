@@ -1,0 +1,46 @@
+.countryselect__container {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+  width: fit-content;
+  padding: 2rem 2rem 2rem 0;
+  background-color: $clr-black;
+
+  p {
+    color: $clr-white;
+    text-transform: uppercase;
+    line-height: 1.6;
+  }
+
+  .countryselect__dropdown__container {
+    overflow: hidden;
+    height: 2rem;
+    transition: $transition-slow;
+
+    &:hover {
+      height: 19.8rem;
+    }
+
+    .countryselect__title {
+      color: $clr-medium-grey;
+    }
+
+    .countryselect__dropdown__options {
+      .countryselect__dropdown__item {
+        cursor: pointer;
+        display: flex;
+        flex-wrap: nowrap;
+        transform: translateX(-20px);
+        transition: $transition;
+
+        &:hover {
+          transform: translateX(0);
+        }
+
+        .countryselect__arrow {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}

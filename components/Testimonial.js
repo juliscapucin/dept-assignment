@@ -5,8 +5,8 @@ export default function Testimonial({ testimonial }) {
 
   return (
     <section className='testimonial__container'>
-      <h4>{acftestimonialtext}</h4>
-      <h4>{acftestimonialauthor}</h4>
+      <h5>{acftestimonialtext}</h5>
+      <h6>{acftestimonialauthor}</h6>
     </section>
   );
 }

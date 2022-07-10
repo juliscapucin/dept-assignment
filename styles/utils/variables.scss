@@ -17,8 +17,9 @@ $clr-dark-grey: #3e3e3e;
 $clr-tint: #5115f7;
 $clr-outline: #e7e5e4;
 
-$transition: all 0.3s ease-in;
 $ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+$transition: all 0.3s ease-in;
+$transition-slow: all 0.8s $ease-out-expo;
 $max-width: 1170px;
 $fixed-width: 620px;
 
