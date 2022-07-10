@@ -40,13 +40,15 @@ export default function Header() {
 
   useEffect(() => {
     queryData();
+    console.log(window.innerWidth);
   }, []);
 
   return (
     <header className='header'>
       <div className='header__logo__container'>
         <div className='header__logo'>
-          <DeptLogo fill={"ffffff"} />
+          <DeptLogo fill='ffffff' />
+          {/* <DeptLogo fill={window.innerWidth > 992 ? "ffffff" : "000000"} /> */}
         </div>
       </div>
       <nav className='navbar'>

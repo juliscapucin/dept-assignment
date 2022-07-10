@@ -52,7 +52,7 @@ export default function Footer() {
       <div className='footer__container__top'>
         <div className='footer__logo__container'>
           <div className='footer__logo'>
-            <DeptLogo fill={"ffffff"} />
+            <DeptLogo />
           </div>
         </div>
         <nav className='footer__navbar'>

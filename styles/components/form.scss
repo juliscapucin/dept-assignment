@@ -1,11 +1,106 @@
 .form__container {
   width: 100%;
-  height: 43.8rem;
+  min-height: 43.8rem;
   background-color: $clr-white;
+  display: block;
+  padding: 4rem;
 
   .form__title__container {
+    width: 100%;
+    display: flex;
     h3 {
       color: $clr-black;
+      line-height: 1.6;
+    }
+  }
+
+  .form {
+    width: 100%;
+    display: block;
+
+    .input__group {
+      width: 100%;
+      margin: 1rem 0;
+    }
+    .input__group label {
+      width: 100%;
+      text-transform: uppercase;
+    }
+
+    .input__group input,
+    .input__group textarea {
+      resize: none;
+      width: 50rem;
+      background: transparent;
+      border: 0;
+      outline: 0;
+      padding: 10px 0;
+      border-bottom: 1px solid $clr-light-grey;
+      color: $clr-black;
+    }
+
+    .form__btn {
+      background: $clr-white;
+      color: $clr-tint;
+      outline: 0;
+      width: 100%;
+      height: 4rem;
+      padding: 0.8rem 4rem;
+      margin: 3rem auto 1rem 0;
+      border: 1px solid $clr-tint;
+      border-radius: 3rem;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+    .form__title__container {
+      display: block;
+      width: 20rem;
+    }
+
+    .form {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+
+      .form__first__row {
+        display: flex;
+        gap: 4rem;
+      }
+
+      .input__group {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-items: center;
+        margin: 10px 0;
+        position: relative;
+      }
+      .input__group label {
+        width: 100%;
+        text-transform: uppercase;
+      }
+      .input__group input,
+      .input__group textarea {
+        resize: none;
+        width: 100%;
+        background: transparent;
+        border: 0;
+        outline: 0;
+        padding: 10px 0;
+        border-bottom: 1px solid $clr-light-grey;
+        color: $clr-black;
+      }
+
+      .form__btn {
+        color: $clr-black;
+        border: 1px solid $clr-black;
+        width: 15rem;
+      }
     }
   }
 }

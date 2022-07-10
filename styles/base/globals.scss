@@ -39,7 +39,7 @@ a {
   }
 }
 a:hover {
-  color: $clr-white;
+  color: $clr-tint;
 }
 
 img {
@@ -47,13 +47,11 @@ img {
 }
 button,
 button:focus {
-  font-size: clamp(0.7rem, 1vw, 0.8rem);
+  font-size: 1.8rem;
   outline: none;
   border: none;
   cursor: pointer;
   background-color: transparent;
-  // border-radius: 25% 10%;
-  // border-radius: 10px;
 }
 
 button:active {

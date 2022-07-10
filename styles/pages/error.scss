@@ -1,0 +1,12 @@
+.error__container {
+  width: 100%;
+  height: calc(100vh - 11rem - 5rem);
+  display: grid;
+  place-items: center;
+  padding: 4rem;
+
+  h1,
+  h3 {
+    color: $clr-black;
+  }
+}
