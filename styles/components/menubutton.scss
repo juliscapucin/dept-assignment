@@ -11,10 +11,12 @@
     .menu__btn__menu {
       position: absolute;
       right: 0;
-      top: 3rem;
+      top: 3.5rem;
       p {
         color: $clr-black;
         line-height: 1;
+        font-size: 1.6rem;
+        font-weight: 100;
       }
     }
 

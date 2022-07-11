@@ -65,7 +65,7 @@
   .textcard__text__container {
     width: 100%;
     background-color: $clr-black;
-    padding: 3rem 4rem 4rem 4rem;
+    padding: 0 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,7 +79,7 @@
       &:nth-child(2) {
         border-top: 1px $clr-light-grey solid;
         border-bottom: none;
-        padding: 4rem 0;
+        padding: 3rem 0;
       }
 
       .textcard__item__title {
@@ -104,8 +104,6 @@
 
 @media screen and (min-width: $desktop) {
   .textcard__container {
-    // grid-template-rows: repeat(1, 56.8rem);
-    // grid-template-columns: 2fr 1fr;
     display: flex;
 
     &.reverse {
@@ -130,6 +128,8 @@
       padding: 3rem;
 
       .textcard__text__item {
+        padding: 3rem 0;
+
         &:nth-child(2) {
           border-top: 1px $clr-light-grey solid;
           border-bottom: 1px $clr-light-grey solid;

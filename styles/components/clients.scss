@@ -2,12 +2,27 @@
   width: 100%;
   min-height: 97.7rem;
   background-color: $clr-black;
-  padding: 10rem 4rem 4rem 4rem;
+  padding: 10rem 3rem 4rem 3rem;
 
   .clients__text {
     margin-top: 3rem;
     h6 {
       color: $clr-white;
+      line-height: 1;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .clients__container {
+    min-height: 97.7rem;
+    padding: 10rem 4rem 4rem 4rem;
+
+    .clients__text {
+      margin-top: 3rem;
+      h6 {
+        color: $clr-white;
+      }
     }
   }
 }

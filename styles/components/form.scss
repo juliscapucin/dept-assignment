@@ -1,17 +1,19 @@
 .form__container {
   width: 100%;
-  // min-height: 4.1rem;
   background-color: $clr-white;
   display: block;
-  padding: 4rem;
+  padding: 3rem;
 
   .form__title__container {
     width: 100%;
     display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+
     h3 {
       color: $clr-black;
       font-weight: 300;
-      line-height: 1.5;
+      line-height: 1.1;
     }
   }
 
@@ -32,7 +34,7 @@
     .input__group input,
     .input__group textarea {
       resize: none;
-      width: 50rem;
+      width: 100%;
       background: transparent;
       border: 0;
       outline: 0;
@@ -50,6 +52,11 @@
       margin: 3.5rem auto 1rem 0;
       border: 1px solid $clr-tint;
       border-radius: 3rem;
+
+      p {
+        color: $clr-tint;
+        font-weight: 100;
+      }
     }
   }
 
@@ -62,6 +69,9 @@
     .form__title__container {
       display: block;
       width: 30rem;
+      h3 {
+        line-height: 1.5;
+      }
     }
 
     .form {
@@ -94,11 +104,6 @@
       }
       .input__group input,
       .input__group textarea {
-        resize: none;
-        width: 100%;
-        background: transparent;
-        border: 0;
-        outline: 0;
         padding: 0.5rem 0;
         border-bottom: 1px solid $clr-light-grey;
         color: $clr-black;

@@ -1,8 +1,7 @@
 .footer__container {
-  padding: 4rem 4rem 4rem 4rem;
+  padding: 3rem;
   position: relative;
   width: 100%;
-  min-height: 31rem;
   background-color: $clr-black;
   color: $clr-white;
 
@@ -12,8 +11,8 @@
 
   .footer__container__top {
     width: 100%;
-    padding: 0 0 5rem 0;
-    margin-bottom: 5rem;
+    padding: 0 0 4rem 0;
+    margin-bottom: 4rem;
     display: block;
     border-bottom: 1px solid $clr-dark-grey;
 
@@ -43,10 +42,13 @@
 
   .footer__container__bottom {
     display: block;
-    padding: 0 2rem 0 1rem;
+    padding: 0;
     p {
       color: $clr-medium-grey;
       margin: 0;
+      font-size: 1.3rem;
+      line-height: 1.2;
+      font-weight: 300;
 
       &:last-child {
         margin: 2rem 0 0 0;
@@ -82,6 +84,8 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
+      padding: 0 0 5rem 0;
+      margin-bottom: 5rem;
 
       .footer__logo__container {
         display: block;
@@ -130,7 +134,9 @@
     .footer__container__bottom {
       display: flex;
       gap: 4rem;
+      padding: 0 2rem 0 1rem;
       p {
+        font-size: 1.6rem;
         margin: 0;
         font-weight: 300;
         letter-spacing: 0.02rem;

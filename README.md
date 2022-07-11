@@ -1,6 +1,6 @@
 ## Description
 
-This is a project assigned by DEPT® to Juli Scapucin for recruitment process purposes.
+This is a project assigned by DEPT® to Juli Scapucin for recruitment process purposes. Check Next Steps session below for points of improvement.
 
 It uses:
 
@@ -8,9 +8,19 @@ It uses:
 
 2 Wordpress back-end, hosted at http://dept.wordpresssites.host/wp-admin
 
-3 Front-end hosted at http://dept.juliscapucin.com/ on Digital Ocean
+3 Apollo GraphQL (https://www.apollographql.com/)
 
-4 Maison Neue Trial font from Milieu Grotesque (https://www.milieugrotesque.com/)
+4 Sass CSS using BEM methodology (or at least tried :))
+
+4 Front-end hosted at http://dept.juliscapucin.com/ on Digital Ocean
+
+5 Maison Neue Trial font from Milieu Grotesque (https://www.milieugrotesque.com/)
+
+6 Transfonter (https://transfonter.org/)
+
+7 Favicon Generator (https://realfavicongenerator.net/)
+
+8 PerfectPixel Chrome extension (https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi)
 
 ## Getting Started
 
@@ -30,7 +40,7 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-### Production process
+## Production process
 
 ## Step 1
 
@@ -55,3 +65,20 @@ Deployment to Digital Ocean and testing on different devices
 ## Step 6
 
 Pixel perfect styling fixes with PerfectPixel Chrome extension (https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi) and improved responsiveness
+
+## Next Steps
+
+1 Implement scroll-activated top navigation
+2 Implement :hover state on menu links on Sidebar
+3 Set max-width for main container
+4 Organize components in a better folder structure (BEM?)
+5 Review GraphQL structure
+6 Implement backend for country select menu
+7 Implement logos as svg components to avoid img tags
+8 Implement page transitions with Framer Motion
+9 Refine / fix styles & line breaks & font-weights
+10 Check scroll bug on mobile
+11 Fix scroll to top button
+12 Check if logo order matters on mobile
+13 Implement form functionality
+14 Add social media icons to footer
