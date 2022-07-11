@@ -67,7 +67,12 @@ export default function Header({ showSideMenu, setShowSideMenu }) {
           })}
         </ul>
         <div className={`header__burger__btn ${showSideMenu && "active"}`}>
-          <button onClick={() => setShowSideMenu(!showSideMenu)}>
+          <button
+            onClick={() => {
+              setShowSideMenu(!showSideMenu);
+              document.body.classList.toggle("body__disable__scroll");
+            }}
+          >
             <MenuButton isSideMenuOpen={showSideMenu} />
           </button>
         </div>

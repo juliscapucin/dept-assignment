@@ -1,8 +1,9 @@
 .main__container {
+  position: relative;
   max-width: 100vw;
-  height: 100vh;
+  // height: 100vh;
   overflow-x: hidden;
-  overflow-y: scroll;
+  // overflow-y: scroll;
 
   &.main__disable__scroll {
     overflow-y: hidden;

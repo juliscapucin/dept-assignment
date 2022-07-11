@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 import LogoDept from "./LogoDept";
+import Facebook from "./icons/Facebook";
+import Instagram from "./icons/Instagram";
+import Twitter from "./icons/Twitter";
 
 export default function Footer() {
   const [footerLinks, setFooterLinks] = useState([]);
@@ -56,6 +59,11 @@ export default function Footer() {
           <div className='footer__logo'>
             <LogoDept />
           </div>
+        </div>
+        <div className='footer__socials'>
+          <Facebook />
+          <Twitter />
+          <Instagram />
         </div>
         <nav className='footer__navbar'>
           <ul>

@@ -70,7 +70,7 @@ Pixel perfect styling fixes with PerfectPixel Chrome extension (https://chrome.g
 
 1 Implement scroll-activated top navigation
 
-2 Implement :hover state on menu links on Sidebar
+2 Cleanup CSS
 
 3 Set max-width for main container
 
@@ -86,22 +86,18 @@ Pixel perfect styling fixes with PerfectPixel Chrome extension (https://chrome.g
 
 9 Refine / fix styles & line breaks & font-weights
 
-10 Check scroll bug on mobile
+10 Check scroll bug on mobile Sidemenu
 
-11 Fix scroll to top button
+11 Implement loaders
 
 12 Check if logo order matters on mobile
 
 13 Implement form functionality
 
-14 Add social media icons to footer
+14 Implement filter functionality
 
 15 Improve Sidemenu animation
 
 16 Implement Locomotive Scroll (?)
 
 17 Implement keyboard navigation
-
-18 Implement loaders
-
-19 Fix Sidemenu horizontal scroll on mobile
