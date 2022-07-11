@@ -69,17 +69,31 @@ Pixel perfect styling fixes with PerfectPixel Chrome extension (https://chrome.g
 ## Next Steps
 
 1 Implement scroll-activated top navigation
+
 2 Implement :hover state on menu links on Sidebar
+
 3 Set max-width for main container
+
 4 Organize components in a better folder structure (BEM?)
+
 5 Review GraphQL structure
+
 6 Implement backend for country select menu
+
 7 Implement logos as svg components to avoid img tags
+
 8 Implement page transitions with Framer Motion
+
 9 Refine / fix styles & line breaks & font-weights
+
 10 Check scroll bug on mobile
+
 11 Fix scroll to top button
+
 12 Check if logo order matters on mobile
+
 13 Implement form functionality
+
 14 Add social media icons to footer
+
 15 Improve Sidemenu animation
