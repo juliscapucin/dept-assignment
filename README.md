@@ -97,3 +97,11 @@ Pixel perfect styling fixes with PerfectPixel Chrome extension (https://chrome.g
 14 Add social media icons to footer
 
 15 Improve Sidemenu animation
+
+16 Implement Locomotive Scroll (?)
+
+17 Implement keyboard navigation
+
+18 Implement loaders
+
+19 Fix Sidemenu horizontal scroll on mobile
