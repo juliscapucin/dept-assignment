@@ -116,8 +116,8 @@ export default function Home({
             </div>
             <h4 dangerouslySetInnerHTML={{ __html: heroText }}></h4>
           </div>
-          <div className='hero__img__container'>
-            <div className='hero__img'>
+          <div className='home__hero__img__container'>
+            <div className='home__hero__img'>
               <Image
                 src={heroImage.sourceUrl ?? placeholderImage}
                 alt='Hero image'

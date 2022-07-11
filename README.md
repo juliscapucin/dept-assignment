@@ -82,3 +82,4 @@ Pixel perfect styling fixes with PerfectPixel Chrome extension (https://chrome.g
 12 Check if logo order matters on mobile
 13 Implement form functionality
 14 Add social media icons to footer
+15 Improve Sidemenu animation
