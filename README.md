@@ -1,4 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Description
+
+This is a project assigned by DEPT® to Juli Scapucin for recruitment process purposes.
+
+It uses:
+
+1 [Next.js](https://nextjs.org/) bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+2 Wordpress back-end, hosted at http://dept.wordpresssites.host/wp-admin
+
+3 Front-end hosted at http://dept.juliscapucin.com/ on Digital Ocean
+
+4 Maison Neue Trial font from Milieu Grotesque (https://www.milieugrotesque.com/)
 
 ## Getting Started
 
@@ -18,17 +30,28 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+### Production process
 
-To learn more about Next.js, take a look at the following resources:
+## Step 1
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Wordpress setup > Plugins: Custom Post Type UI, Advanced Custom Fields, WPGraphQL, WPGraphQL for Advanced Custom Fields, Post Types Order
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Step 2
 
-## Deploy on Vercel
+Next.js, component and jsx implementation and integration with backend using Apollo GraphQL (https://www.apollographql.com/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Step 3
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Transform fonts to woff formats using Transfonter (https://transfonter.org/)
+
+## Step 4
+
+Styling and responsiveness
+
+## Step 5
+
+Deployment to Digital Ocean and testing on different devices
+
+## Step 6
+
+Pixel perfect styling fixes with PerfectPixel Chrome extension (https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi) and improved responsiveness

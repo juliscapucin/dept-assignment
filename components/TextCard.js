@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 
 import ReadMore from "./ReadMore";
 
-export default function TextCard(textCard) {
+export default function TextCard({ textCard, order }) {
   const {
     mainImage,
     mainClientName,
@@ -14,7 +15,7 @@ export default function TextCard(textCard) {
     title2,
     client3,
     title3,
-  } = textCard.textCard.textCards;
+  } = textCard.textCards;
 
   const textsArray = [
     { subtitle: client1, title: title1 },
@@ -23,10 +24,12 @@ export default function TextCard(textCard) {
   ];
 
   return (
-    <article className='textcard__container'>
+    <article className={`textcard__container ${order === 2 ? "reverse" : ""}`}>
       <div className='textcard__main'>
-        <div className='textcard__title__container'>
-          <h3>{mainClientName}</h3>
+        <div className='textcard__main__text__container'>
+          <div className='textcard__main__subtitle'>
+            <p>{mainClientName}</p>
+          </div>
           <h3>{mainTitle}</h3>
           <ReadMore />
         </div>

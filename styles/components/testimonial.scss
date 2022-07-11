@@ -7,13 +7,17 @@
   align-items: center;
   justify-content: center;
   background-color: $clr-black;
-  gap: 2rem;
+  gap: 2.5rem;
   h5 {
     color: $clr-white;
     text-align: center;
+    font-weight: 100;
+    line-height: 1;
   }
   h6 {
     text-transform: uppercase;
+    color: $clr-white;
+    font-weight: 100;
   }
 
   @media screen and (min-width: $desktop) {

@@ -1,6 +1,6 @@
 .form__container {
   width: 100%;
-  min-height: 43.8rem;
+  // min-height: 4.1rem;
   background-color: $clr-white;
   display: block;
   padding: 4rem;
@@ -10,7 +10,8 @@
     display: flex;
     h3 {
       color: $clr-black;
-      line-height: 1.6;
+      font-weight: 300;
+      line-height: 1.5;
     }
   }
 
@@ -25,6 +26,7 @@
     .input__group label {
       width: 100%;
       text-transform: uppercase;
+      font-weight: 300;
     }
 
     .input__group input,
@@ -34,7 +36,7 @@
       background: transparent;
       border: 0;
       outline: 0;
-      padding: 10px 0;
+      padding: 1rem 0;
       border-bottom: 1px solid $clr-light-grey;
       color: $clr-black;
     }
@@ -44,31 +46,37 @@
       color: $clr-tint;
       outline: 0;
       width: 100%;
-      height: 4rem;
-      padding: 0.8rem 4rem;
-      margin: 3rem auto 1rem 0;
+      height: 5rem;
+      margin: 3.5rem auto 1rem 0;
       border: 1px solid $clr-tint;
       border-radius: 3rem;
     }
   }
 
   @media screen and (min-width: $desktop) {
+    height: 41rem;
     display: grid;
     grid-template-columns: 1fr 3fr;
+    padding: 4.3rem 4rem 4rem 6rem;
 
     .form__title__container {
       display: block;
-      width: 20rem;
+      width: 30rem;
     }
 
     .form {
-      width: 70%;
+      width: 65%;
       display: flex;
       flex-direction: column;
+      padding: 0.5rem 0 0 3.6rem;
 
       .form__first__row {
         display: flex;
         gap: 4rem;
+      }
+
+      .form__second__row {
+        margin-top: 1.5rem;
       }
 
       .input__group {
@@ -77,7 +85,7 @@
         flex-direction: column;
         align-items: flex-start;
         align-items: center;
-        margin: 10px 0;
+        margin: 1rem 0;
         position: relative;
       }
       .input__group label {
@@ -91,15 +99,19 @@
         background: transparent;
         border: 0;
         outline: 0;
-        padding: 10px 0;
+        padding: 0.5rem 0;
         border-bottom: 1px solid $clr-light-grey;
         color: $clr-black;
       }
 
       .form__btn {
-        color: $clr-black;
         border: 1px solid $clr-black;
-        width: 15rem;
+        width: 17rem;
+
+        p {
+          color: $clr-black;
+          font-weight: 100;
+        }
       }
     }
   }

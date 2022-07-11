@@ -111,7 +111,9 @@ export default function Home({
       <main className='home__main'>
         <section className='home__hero'>
           <div className='home__hero__text__container'>
-            <p>WORK</p>
+            <div className='home__hero__subtitle'>
+              <p>WORK</p>
+            </div>
             <h4 dangerouslySetInnerHTML={{ __html: heroText }}></h4>
           </div>
           <div className='hero__img__container'>
@@ -136,15 +138,15 @@ export default function Home({
           })}
         </section>
         <section className='home__textcards__1'>
-          <TextCard textCard={textCards[0]} />
+          <TextCard textCard={textCards[0]} order={1} />
         </section>
         <section className='home__cards__grid'>
           {cards2.map((card, index) => {
             return <Card key={index} card={card.cards} />;
           })}
         </section>
-        <section className='home__textcards__1'>
-          <TextCard textCard={textCards[1]} />
+        <section className='home__textcards__2'>
+          <TextCard textCard={textCards[1]} order={2} />
         </section>
         <section className='home__cards__grid'>
           {cards3.map((card, index) => {

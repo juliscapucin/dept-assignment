@@ -18,12 +18,16 @@ export default function Form() {
           </div>
         </div>
 
-        <div className='input__group'>
-          <label>Message</label>
-          <textarea rows='5' placeholder=''></textarea>
+        <div className='form__second__row'>
+          <div className='input__group'>
+            <label>Message</label>
+            <textarea rows='5' placeholder=''></textarea>
+          </div>
         </div>
 
-        <button className='form__btn'>SEND</button>
+        <button className='form__btn'>
+          <p>SEND</p>
+        </button>
       </form>
     </section>
   );

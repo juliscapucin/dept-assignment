@@ -7,7 +7,6 @@
 
   .menu__btns {
     position: relative;
-    background-color: yellow;
 
     .menu__btn__menu {
       position: absolute;
@@ -29,9 +28,10 @@
 
   .menu__btn__close {
     position: absolute;
-    right: 2rem;
-    width: 3rem;
-    height: 4rem;
+    right: -1rem;
+    top: 4rem;
+    width: 2.2rem;
+    height: 2.2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,7 +39,7 @@
 
     .menu__btn__line {
       width: 100%;
-      height: 0.4rem;
+      height: 0.2rem;
       margin: 0.2rem 0;
       background-color: $clr-white;
     }

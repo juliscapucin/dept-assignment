@@ -1,6 +1,6 @@
-export default function DeptLogo({ fill }) {
+export default function LogoDept() {
   return (
-    <div className='deptlogo-container'>
+    <div className='logodept__container'>
       <svg
         width='86'
         height='40'

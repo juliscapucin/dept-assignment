@@ -1,15 +1,5 @@
 @font-face {
   font-family: "maison-neue";
-  src: url("../../asset/MaisonNeue/MaisonNeueTRIAL-ExtraThin.woff2")
-      format("woff2"),
-    url("../../asset/MaisonNeue/MaisonNeueTRIAL-ExtraThin.woff") format("woff");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "maison-neue";
   src: url("../../asset/MaisonNeue/MaisonNeueTRIAL-Book.woff2") format("woff2"),
     url("../../asset/MaisonNeue/MaisonNeueTRIAL-Book.woff") format("woff");
   font-weight: normal;
@@ -78,6 +68,16 @@
   src: url("../../asset/MaisonNeue/MaisonNeueTRIAL-Demi.woff2") format("woff2"),
     url("../../asset/MaisonNeue/MaisonNeueTRIAL-Demi.woff") format("woff");
   font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "maison-neue";
+  src: url("../../asset/MaisonNeue/MaisonNeueTRIAL-ExtraThin.woff2")
+      format("woff2"),
+    url("../../asset/MaisonNeue/MaisonNeueTRIAL-ExtraThin.woff") format("woff");
+  font-weight: 100;
   font-style: normal;
   font-display: swap;
 }

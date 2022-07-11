@@ -2,6 +2,7 @@ import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import { useEffect, useState } from "react";
 
 import CountrySelect from "./CountrySelect";
+import LogoDept from "./LogoDept";
 
 export default function SideMenu() {
   const [sidemenuLinks, setSidemenuLinks] = useState([]);
@@ -40,6 +41,9 @@ export default function SideMenu() {
 
   return (
     <nav className='sidemenu__container'>
+      <div className='sidemenu__logodept'>
+        <LogoDept />
+      </div>
       <CountrySelect />
       <ul className='sidemenu__links__container'>
         {sidemenuLinks.map((link, index) => {

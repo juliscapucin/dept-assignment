@@ -4,7 +4,7 @@ import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import Link from "next/link";
 
 import MenuButton from "./MenuButton";
-import DeptLogo from "./DeptLogo";
+import LogoDept from "./LogoDept";
 
 import SideMenu from "./SideMenu";
 
@@ -49,8 +49,7 @@ export default function Header({ showSideMenu, setShowSideMenu }) {
         <Link href='/'>
           <a>
             <div className='header__logo'>
-              <DeptLogo fill='ffffff' />
-              {/* <DeptLogo fill={window.innerWidth > 992 ? "ffffff" : "000000"} /> */}
+              <LogoDept />
             </div>
           </a>
         </Link>
@@ -67,9 +66,6 @@ export default function Header({ showSideMenu, setShowSideMenu }) {
             );
           })}
         </ul>
-        {/* <button onClick={() => setShowSideMenu(!showSideMenu)}>
-          <ButtonMore />
-        </button> */}
         <div className={`header__burger__btn ${showSideMenu && "active"}`}>
           <button onClick={() => setShowSideMenu(!showSideMenu)}>
             <MenuButton isSideMenuOpen={showSideMenu} />

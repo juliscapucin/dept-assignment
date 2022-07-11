@@ -84,7 +84,7 @@
     height: 11.5rem;
     background-color: $clr-black;
     color: $clr-white;
-    padding: 4rem;
+    padding: 4rem 7rem 4rem 4rem;
 
     .header__logo__container {
       .header__logo {
@@ -99,13 +99,15 @@
 
       > ul {
         display: flex;
+        padding-right: 3rem;
 
         > li {
-          margin-left: 4rem;
+          margin-left: 5.2rem;
           text-transform: uppercase;
 
           a {
             color: $clr-white;
+            font-size: 1.8rem;
             display: inline-block;
             position: relative;
             cursor: pointer;

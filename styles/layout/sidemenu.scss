@@ -4,6 +4,17 @@
   height: 100vh;
   overflow-y: scroll;
 
+  .sidemenu__logodept {
+    position: absolute;
+    top: 3.5rem;
+    left: 5rem;
+    width: 10rem;
+    height: 5rem;
+    color: $clr-white;
+    fill: currentColor;
+    z-index: 50;
+  }
+
   .sidemenu__close__btn {
     position: absolute;
     right: 4rem;
@@ -11,12 +22,20 @@
   }
 
   .sidemenu__links__container {
-    padding: 10rem 4rem 4rem 4rem;
+    padding: 11rem 5rem 4rem 5rem;
     > li {
-      border-bottom: 1px $clr-white solid;
-      padding: 2rem 0;
+      border-bottom: 0.5px $clr-white solid;
+      padding: 1.2rem 0 0.2rem 0;
       text-transform: uppercase;
       text-align: right;
+      // display: flex;
+      // align-items: center;
+      // justify-content: flex-end;
+
+      h2 {
+        font-weight: 300;
+        line-height: 1;
+      }
     }
   }
 }

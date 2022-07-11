@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 import Link from "next/link";
 
-import DeptLogo from "./DeptLogo";
+import LogoDept from "./LogoDept";
 
 export default function Footer() {
   const [footerLinks, setFooterLinks] = useState([]);
@@ -49,12 +49,12 @@ export default function Footer() {
         <div className='footer__arrow'>
           <img src='./icons/arrow-top.svg' alt='Scroll to top' />
         </div>
-        <h4>TOP</h4>
+        <h6>TOP</h6>
       </button>
       <div className='footer__container__top'>
         <div className='footer__logo__container'>
           <div className='footer__logo'>
-            <DeptLogo />
+            <LogoDept />
           </div>
         </div>
         <nav className='footer__navbar'>

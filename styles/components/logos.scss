@@ -6,6 +6,7 @@
   place-items: center;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(6, 1fr);
+
   .logo {
     position: relative;
     width: 100%;
@@ -21,9 +22,11 @@
 
 @media screen and (min-width: $desktop) {
   .logos__container {
-    height: 97.7rem;
+    height: 76rem;
+    padding: 0 4rem;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
+
     .logo {
       > img {
         width: 17.1rem;
