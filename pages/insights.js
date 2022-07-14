@@ -1,8 +1,14 @@
+import { useEffect } from "react";
+
 import Link from "next/link";
 
 import Layout from "../components/Layout";
 
 export default function Insights() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Layout title='Insights'>
       <div className='insights__container'>

@@ -1,6 +1,10 @@
+import { useEffect, useRef, useState } from "react";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
+import gsap from "gsap";
 
 import Image from "next/image";
+
+import useIntersect from "../components/hooks/useIntersect";
 
 import Card from "../components/Card";
 import CaseFilter from "../components/CaseFilter";
@@ -83,7 +87,10 @@ export async function getStaticProps() {
   return {
     props: {
       hero: data.heros.nodes[0].heroACF,
-      cards: data.cards.nodes,
+      cards1: [...data.cards.nodes].splice(0, 4),
+      cards2: [...data.cards.nodes].splice(4, 2),
+      cards3: [...data.cards.nodes].splice(6, 4),
+      cards4: [...data.cards.nodes].splice(10, 2),
       textCards: data.textCards.nodes,
       testimonial: data.testimonials.nodes[0].testimonial_text,
       clientsText: data.clients.nodes[0].clients.clientsText,
@@ -93,18 +100,55 @@ export async function getStaticProps() {
 }
 
 export default function Home({
-  cards,
+  cards1,
+  cards2,
+  cards3,
+  cards4,
   clientsText,
   hero,
   testimonial,
   textCards,
 }) {
+  const refCardsGrid = useRef(null);
+  const refTextCard = useRef(null);
+  const [reveal, setReveal] = useState(false);
+
   const { heroImage, heroText } = hero;
 
-  let cards1 = [...cards].splice(0, 4);
-  let cards2 = [...cards].splice(4, 2);
-  let cards3 = [...cards].splice(6, 4);
-  let cards4 = [...cards].splice(10, 2);
+  const intersect = () => useIntersect(refCardsGrid);
+
+  intersect();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    if (intersect) {
+      setReveal(true);
+    }
+  }, [intersect]);
+
+  useEffect(() => {
+    if (reveal) {
+      const cards = [
+        ...refCardsGrid.current.querySelectorAll(".home__card__container"),
+      ];
+
+      gsap.set(cards, { autoAlpha: 0 });
+      gsap.fromTo(
+        cards,
+        { autoAlpha: 0 },
+        {
+          autoAlpha: 1,
+
+          duration: 0.8,
+          stagger: 0.5,
+          delay: 1,
+        }
+      );
+    }
+  }, [reveal]);
 
   return (
     <Layout>
@@ -132,9 +176,13 @@ export default function Home({
         <section className='home__casefilter'>
           <CaseFilter />
         </section>
-        <section className='home__cards__grid'>
+        <section className='home__cards__grid' ref={refCardsGrid}>
           {cards1.map((card, index) => {
-            return <Card key={index} card={card.cards} />;
+            return (
+              <div className='home__card__container' key={index}>
+                <Card card={card.cards} />
+              </div>
+            );
           })}
         </section>
         <section className='home__textcards__1'>

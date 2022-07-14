@@ -36,8 +36,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 ## Production process
@@ -68,7 +66,7 @@ Pixel perfect styling fixes with PerfectPixel Chrome extension (https://chrome.g
 
 ## Next Steps
 
-1 Implement scroll-activated top navigation
+1 === OK === Implement scroll-activated top navigation
 
 2 Cleanup CSS
 
@@ -82,7 +80,7 @@ Pixel perfect styling fixes with PerfectPixel Chrome extension (https://chrome.g
 
 7 Implement logos as svg components to avoid img tags
 
-8 Implement page transitions with Framer Motion
+8 === OK === Implement page transitions with Framer Motion
 
 9 Refine / fix styles & line breaks & font-weights
 
@@ -101,3 +99,21 @@ Pixel perfect styling fixes with PerfectPixel Chrome extension (https://chrome.g
 16 Implement Locomotive Scroll (?)
 
 17 Implement keyboard navigation
+
+18 Fix tablet styles (font + TextCards + Form + Footer)
+
+19 Implement gradient on SideMenu
+
+---
+
+OK
+
+20 Refactor card data splicing in home
+
+21 Add links to TextCards
+
+22 Implement Intersection Observer
+
+23 Implement dynamic year on footer
+
+24 Fix form alignment

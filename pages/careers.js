@@ -1,8 +1,13 @@
 import Link from "next/link";
+import { useEffect } from "react";
 
 import Layout from "../components/Layout";
 
 export default function Careers() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Layout title='Careers'>
       <div className='careers__container'>

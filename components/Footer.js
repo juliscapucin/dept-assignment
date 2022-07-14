@@ -11,6 +11,8 @@ import Twitter from "./icons/Twitter";
 export default function Footer() {
   const [footerLinks, setFooterLinks] = useState([]);
 
+  const year = new Date().getFullYear();
+
   const queryData = async () => {
     const client = new ApolloClient({
       uri: "https://dept.wordpresssites.host/graphql",
@@ -83,7 +85,7 @@ export default function Footer() {
         <p>Chamber of Commerce: 63464101 </p>
         <p>VAT: NL 8552.47.502.B01</p>
         <p>Terms and conditions</p>
-        <p>© 2022 Dept Agency</p>
+        <p>© {year} Dept Agency</p>
       </div>
     </footer>
   );

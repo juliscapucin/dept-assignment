@@ -53,15 +53,19 @@ export default function TextCard({ textCard, order }) {
       <div className='textcard__text__container'>
         {textsArray.map((item, index) => {
           return (
-            <div className='textcard__text__item' key={index}>
-              <div className='textcard__item__subtitle'>
-                <p>{item.subtitle}</p>
-              </div>
-              <div className='textcard__item__title'>
-                <p>{item.title}</p>
-              </div>
-              <ReadMore />
-            </div>
+            <Link href='#' key={index}>
+              <a>
+                <div className='textcard__text__item'>
+                  <div className='textcard__item__subtitle'>
+                    <p>{item.subtitle}</p>
+                  </div>
+                  <div className='textcard__item__title'>
+                    <p>{item.title}</p>
+                  </div>
+                  <ReadMore />
+                </div>
+              </a>
+            </Link>
           );
         })}
       </div>

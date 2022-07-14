@@ -129,6 +129,12 @@
 
       .textcard__text__item {
         padding: 3rem 0;
+        opacity: 1;
+        transition: $transition;
+
+        &:hover {
+          opacity: 60%;
+        }
 
         &:nth-child(2) {
           border-top: 1px $clr-light-grey solid;

@@ -1,9 +1,23 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
+
 import Head from "next/head";
 
 import Header from "./Header";
 import Footer from "./Footer";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { duration: 0.6, staggerChildren: 0.2 },
+  },
+  exit: {
+    opacity: 0,
+    transition: { duration: 0.6, staggerChildren: 0.2 },
+  },
+};
 
 export default function Layout({ title, keywords, description, children }) {
   const router = useRouter();
@@ -47,7 +61,15 @@ export default function Layout({ title, keywords, description, children }) {
         }`}
       >
         <Header showSideMenu={showSideMenu} setShowSideMenu={setShowSideMenu} />
-        {children}
+        <motion.div
+          variants={containerVariants}
+          initial='hidden'
+          animate='visible'
+          exit='exit'
+          key='child'
+        >
+          {children}
+        </motion.div>
         <Footer />
       </main>
     </>

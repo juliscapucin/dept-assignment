@@ -28,7 +28,7 @@ body {
   font-size: 1.6rem;
   letter-spacing: 0.01rem;
 
-  &.body__disable__scroll {
+  &.body--disable-scroll {
     overflow-y: hidden;
   }
 }

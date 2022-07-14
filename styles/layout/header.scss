@@ -1,5 +1,5 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -12,6 +12,12 @@
   color: $clr-black;
   padding: 2rem;
   z-index: 15;
+  transform: translateY(0);
+  transition: $transition;
+
+  &.scroll__down {
+    transform: translateY(-100%);
+  }
 
   .header__logo__container {
     width: 8rem;
