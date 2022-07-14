@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function Facebook() {
+export default function Check() {
   return (
     <svg
       width='19'

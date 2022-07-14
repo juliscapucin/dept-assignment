@@ -91,6 +91,7 @@
       }
 
       .input__group {
+        position: relative;
         width: 50%;
         display: flex;
         flex-direction: column;
@@ -98,19 +99,33 @@
         align-items: center;
         margin: 1rem 0;
         position: relative;
-      }
-      .input__group label {
-        width: 100%;
-        text-transform: uppercase;
-      }
-      .input__group input,
-      .input__group textarea {
-        padding: 0.5rem 0;
-        border-bottom: 1px solid $clr-light-grey;
-        color: $clr-black;
+
+        > label {
+          width: 100%;
+          text-transform: uppercase;
+        }
+        > input,
+        > textarea {
+          padding: 0.5rem 0;
+          border-bottom: 1px solid $clr-light-grey;
+          color: $clr-black;
+        }
+
+        > span {
+          position: absolute;
+          right: 0;
+          color: $clr-medium-grey;
+          font-weight: 300;
+          font-size: 1.4rem;
+        }
+
+        .error__message {
+          bottom: 0;
+        }
       }
 
       .form__btn {
+        position: relative;
         border: 1px solid $clr-black;
         width: 17rem;
 
@@ -119,6 +134,10 @@
           font-weight: 100;
         }
       }
+    }
+    #error__submit {
+      color: red;
+      font-weight: 300;
     }
   }
 }

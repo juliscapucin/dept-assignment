@@ -24,7 +24,9 @@ export default function TextCard({ textCard, order }) {
   ];
 
   return (
-    <article className={`textcard__container ${order === 2 ? "reverse" : ""}`}>
+    <article
+      className={`textcard__container ${order === "left" ? "reverse" : ""}`}
+    >
       <div className='textcard__main'>
         <div className='textcard__main__text__container'>
           <div className='textcard__main__subtitle'>
@@ -54,17 +56,15 @@ export default function TextCard({ textCard, order }) {
         {textsArray.map((item, index) => {
           return (
             <Link href='#' key={index}>
-              <a>
-                <div className='textcard__text__item'>
-                  <div className='textcard__item__subtitle'>
-                    <p>{item.subtitle}</p>
-                  </div>
-                  <div className='textcard__item__title'>
-                    <p>{item.title}</p>
-                  </div>
-                  <ReadMore />
+              <div className='textcard__text__item'>
+                <div className='textcard__item__subtitle'>
+                  <p>{item.subtitle}</p>
                 </div>
-              </a>
+                <div className='textcard__item__title'>
+                  <p>{item.title}</p>
+                </div>
+                <ReadMore />
+              </div>
             </Link>
           );
         })}
